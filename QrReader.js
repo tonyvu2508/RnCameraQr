@@ -4,7 +4,8 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity
+  TouchableOpacity,
+  SafeAreaView
 } from "react-native";
 import { QRreader } from "react-native-qr-decode-image-camera";
 const ImagePicker = require('react-native-image-picker');
@@ -17,21 +18,32 @@ export default class Scanner extends Component {
       reader: {
         message: null,
         data: null
-      }
+      },
+      choicePhoto: false,
+      choiceCamera: false
     };
+    this.objDataToArr = this.objDataToArr.bind(this)
+  }
+  objDataToArr(){
+    let arr = []
+    for(let key in this.state.reader.data){
+      arr.push(this.state.reader.data[key])
+    }
+    return arr
   }
   render() {
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <TouchableOpacity
+          style={styles.button}
           onPress={() => {
             this.openPhoto();
           }}
         >
-          <Text style={{ marginTop: 20 }}>просто кек бля</Text>
+          <Text style={{ color: 'white' }}>Choice Photo</Text>
         </TouchableOpacity>
         <View>
-          {!this.state.reader ? (
+          {/* {!this.state.reader ? (
             <Text>
               {!this.state.reader.message ? "" : `${this.state.reader.message}`}
             </Text>
@@ -41,9 +53,17 @@ export default class Scanner extends Component {
                 ? ""
                 : `${this.state.reader.message}:${this.state.reader.data}`}
             </Text>
-          )}
+          )} */}
+          {
+            this.state.reader.data && this.objDataToArr().map((value, index) => {
+              return (
+                <Text key={index}>QR{index+1} : {value}</Text>
+              )
+            }
+            )
+          }
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 
@@ -66,20 +86,21 @@ export default class Scanner extends Component {
           }
           QRreader(path)
             .then(data => {
+              console.log('data: ',data)
               this.setState({
                 reader: {
-                  message: "message",
+                  message: "QrCode: \n",
                   data: data
                 }
               });
-              setTimeout(() => {
-                this.setState({
-                  reader: {
-                    message: null,
-                    data: null
-                  }
-                });
-              }, 10000);
+              // setTimeout(() => {
+              //   this.setState({
+              //     reader: {
+              //       message: null,
+              //       data: null
+              //     }
+              //   });
+              // }, 10000);
             })
             .catch(err => {
               this.setState({
@@ -98,5 +119,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff"
+  },
+  button: {
+    // flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'blue',
+    borderRadius: 5,
+    borderColor: 'black',
+    padding: 15,
+    marginBottom: 20,
+    marginTop: 30,
+    width: '50%',
+    alignSelf: 'center'
   }
 });
