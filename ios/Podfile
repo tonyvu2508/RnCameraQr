@@ -1,4 +1,7 @@
-platform :ios, '9.0'
+platform :ios, '10.0'
+use_frameworks!
+project 'RnCameraQr.xcodeproj'
+
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 target 'RnCameraQr' do
@@ -33,6 +36,20 @@ target 'RnCameraQr' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  pod 'GoogleMLKit/BarcodeScanning', '3.0.0'
+  pod 'GoogleMLKit/FaceDetection', '3.0.0'
+  pod 'GoogleMLKit/ImageLabeling', '3.0.0'
+  pod 'GoogleMLKit/ImageLabelingCustom', '3.0.0'
+  pod 'GoogleMLKit/ObjectDetection', '3.0.0'
+  pod 'GoogleMLKit/ObjectDetectionCustom', '3.0.0'
+  pod 'GoogleMLKit/PoseDetection', '3.0.0'
+  pod 'GoogleMLKit/PoseDetectionAccurate', '3.0.0'
+  pod 'GoogleMLKit/SegmentationSelfie', '3.0.0'
+  pod 'GoogleMLKit/TextRecognition', '3.0.0'
+  pod 'GoogleMLKit/TextRecognitionChinese', '3.0.0'
+  pod 'GoogleMLKit/TextRecognitionDevanagari', '3.0.0'
+  pod 'GoogleMLKit/TextRecognitionJapanese', '3.0.0'
+  pod 'GoogleMLKit/TextRecognitionKorean', '3.0.0'
 
   target 'RnCameraQrTests' do
     inherit! :search_paths
@@ -50,4 +67,27 @@ target 'RnCameraQr-tvOS' do
     # Pods for testing
   end
 
+end
+post_install do |installer|
+  ## Fix for XCode 12.5
+  find_and_replace("../node_modules/react-native/React/CxxBridge/RCTCxxBridge.mm",
+  "_initializeModules:(NSArray<id<RCTBridgeModule>> *)modules", "_initializeModules:(NSArray<Class> *)modules")
+  find_and_replace("../node_modules/react-native/ReactCommon/turbomodule/core/platform/ios/RCTTurboModuleManager.mm",
+      "RCTBridgeModuleNameForClass(module))", "RCTBridgeModuleNameForClass(Class(module)))")
+end
+def find_and_replace(dir, findstr, replacestr)
+  Dir[dir].each do |name|
+      text = File.read(name)
+      replace = text.gsub(findstr,replacestr)
+      if text != replace
+          puts "Fix: " + name
+          File.open(name, "w") { |file| file.puts replace }
+          STDOUT.flush
+      end
+  end
+  Dir[dir + '*/'].each(&method(:find_and_replace))
+end
+
+pre_install do |installer|
+  Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
 end
