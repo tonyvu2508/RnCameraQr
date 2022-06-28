@@ -16,10 +16,10 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* RnCameraQrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RnCameraQrTests.m */; };
-		380AEBFD574A74AE04D953BC /* libPods-RnCameraQr-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FC9E13007B70346F417E23 /* libPods-RnCameraQr-tvOS.a */; };
-		54BE9616E8D07CF7DB3741F1 /* libPods-RnCameraQr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C67A486126CE473403C753 /* libPods-RnCameraQr.a */; };
-		CA39E32687B06648DE6E29AD /* libPods-RnCameraQrTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 730FAA66FE4E9BC5BEB53608 /* libPods-RnCameraQrTests.a */; };
-		E21C8A7604E83AFB65776BD6 /* libPods-RnCameraQr-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCE177065F570FE84E36A2D /* libPods-RnCameraQr-tvOSTests.a */; };
+		3A81989272E13DCBB92E0AB6 /* libPods-RnCameraQr-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7E49F6BB880D8E3CEC6907 /* libPods-RnCameraQr-tvOSTests.a */; };
+		5AC5A42F6A3D8EB383F14D1C /* libPods-RnCameraQr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7BA876943D25556B81B035 /* libPods-RnCameraQr.a */; };
+		A49E4DF750C914BBA5A86828 /* libPods-RnCameraQr-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9965B170113B6904E26D04E3 /* libPods-RnCameraQr-tvOS.a */; };
+		C2A0828237661B0E6370301D /* libPods-RnCameraQrTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2D80F0CFE185EEC2CDDF69 /* libPods-RnCameraQrTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,19 +54,19 @@
 		2D02E47B1E0B4A5D006451C7 /* RnCameraQr-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RnCameraQr-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RnCameraQr-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RnCameraQr-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E867AB22858B8BC62230E24 /* Pods-RnCameraQrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnCameraQrTests.release.xcconfig"; path = "Target Support Files/Pods-RnCameraQrTests/Pods-RnCameraQrTests.release.xcconfig"; sourceTree = "<group>"; };
-		2FCE177065F570FE84E36A2D /* libPods-RnCameraQr-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RnCameraQr-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C969EEB7A0B8A29AF733BC /* Pods-RnCameraQrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnCameraQrTests.debug.xcconfig"; path = "Target Support Files/Pods-RnCameraQrTests/Pods-RnCameraQrTests.debug.xcconfig"; sourceTree = "<group>"; };
-		50C67A486126CE473403C753 /* libPods-RnCameraQr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RnCameraQr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		730FAA66FE4E9BC5BEB53608 /* libPods-RnCameraQrTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RnCameraQrTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A2D80F0CFE185EEC2CDDF69 /* libPods-RnCameraQrTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RnCameraQrTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9965B170113B6904E26D04E3 /* libPods-RnCameraQr-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RnCameraQr-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4C4243083B93A13FE11EC9 /* Pods-RnCameraQr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnCameraQr.debug.xcconfig"; path = "Target Support Files/Pods-RnCameraQr/Pods-RnCameraQr.debug.xcconfig"; sourceTree = "<group>"; };
 		9D264FB1F959370DFD47F11B /* Pods-RnCameraQr-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnCameraQr-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-RnCameraQr-tvOS/Pods-RnCameraQr-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		A3FC9E13007B70346F417E23 /* libPods-RnCameraQr-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RnCameraQr-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA7BA876943D25556B81B035 /* libPods-RnCameraQr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RnCameraQr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF5C4291E777397BB2519C5 /* Pods-RnCameraQr-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnCameraQr-tvOS.release.xcconfig"; path = "Target Support Files/Pods-RnCameraQr-tvOS/Pods-RnCameraQr-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		D90ACC48AD85D74F33D30C0A /* Pods-RnCameraQr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnCameraQr.release.xcconfig"; path = "Target Support Files/Pods-RnCameraQr/Pods-RnCameraQr.release.xcconfig"; sourceTree = "<group>"; };
 		DD451C620D11C6130118CEFF /* Pods-RnCameraQr-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnCameraQr-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-RnCameraQr-tvOSTests/Pods-RnCameraQr-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA539362E90182B3C634EE31 /* Pods-RnCameraQr-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnCameraQr-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RnCameraQr-tvOSTests/Pods-RnCameraQr-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		FB7E49F6BB880D8E3CEC6907 /* libPods-RnCameraQr-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RnCameraQr-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA39E32687B06648DE6E29AD /* libPods-RnCameraQrTests.a in Frameworks */,
+				C2A0828237661B0E6370301D /* libPods-RnCameraQrTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54BE9616E8D07CF7DB3741F1 /* libPods-RnCameraQr.a in Frameworks */,
+				5AC5A42F6A3D8EB383F14D1C /* libPods-RnCameraQr.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				380AEBFD574A74AE04D953BC /* libPods-RnCameraQr-tvOS.a in Frameworks */,
+				A49E4DF750C914BBA5A86828 /* libPods-RnCameraQr-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E21C8A7604E83AFB65776BD6 /* libPods-RnCameraQr-tvOSTests.a in Frameworks */,
+				3A81989272E13DCBB92E0AB6 /* libPods-RnCameraQr-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				50C67A486126CE473403C753 /* libPods-RnCameraQr.a */,
-				A3FC9E13007B70346F417E23 /* libPods-RnCameraQr-tvOS.a */,
-				2FCE177065F570FE84E36A2D /* libPods-RnCameraQr-tvOSTests.a */,
-				730FAA66FE4E9BC5BEB53608 /* libPods-RnCameraQrTests.a */,
+				AA7BA876943D25556B81B035 /* libPods-RnCameraQr.a */,
+				9965B170113B6904E26D04E3 /* libPods-RnCameraQr-tvOS.a */,
+				FB7E49F6BB880D8E3CEC6907 /* libPods-RnCameraQr-tvOSTests.a */,
+				7A2D80F0CFE185EEC2CDDF69 /* libPods-RnCameraQrTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,7 +161,6 @@
 				32C969EEB7A0B8A29AF733BC /* Pods-RnCameraQrTests.debug.xcconfig */,
 				2E867AB22858B8BC62230E24 /* Pods-RnCameraQrTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -290,7 +289,11 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = K2LSDET2QU;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = K2LSDET2QU;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -308,6 +311,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -583,6 +587,7 @@
 			baseConfigurationReference = 32C969EEB7A0B8A29AF733BC /* Pods-RnCameraQrTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = K2LSDET2QU;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -607,6 +612,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = K2LSDET2QU;
 				INFOPLIST_FILE = RnCameraQrTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -628,6 +634,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = K2LSDET2QU;
 				INFOPLIST_FILE = RnCameraQr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -647,6 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2LSDET2QU;
 				INFOPLIST_FILE = RnCameraQr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

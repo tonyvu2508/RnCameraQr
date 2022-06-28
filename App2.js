@@ -17,6 +17,7 @@ class App extends Component {
         this.sortBarcodesWithXCoordinate = this.sortBarcodesWithXCoordinate.bind(this);
     }
     barcodeRecognized = ({ barcodes }) => {
+        // console.log('barcodes: ', barcodes);
         if (barcodes.length > 0) {
             // console.log('barcodes: ', barcodes);
             //   let hasBarcode = false;
