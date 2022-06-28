@@ -1,5 +1,5 @@
-platform :ios, '10.0'
-use_frameworks!
+platform :ios, '12.0'
+# use_frameworks!
 project 'RnCameraQr.xcodeproj'
 
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
@@ -36,20 +36,26 @@ target 'RnCameraQr' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
-  pod 'GoogleMLKit/BarcodeScanning', '3.0.0'
-  pod 'GoogleMLKit/FaceDetection', '3.0.0'
-  pod 'GoogleMLKit/ImageLabeling', '3.0.0'
-  pod 'GoogleMLKit/ImageLabelingCustom', '3.0.0'
-  pod 'GoogleMLKit/ObjectDetection', '3.0.0'
-  pod 'GoogleMLKit/ObjectDetectionCustom', '3.0.0'
-  pod 'GoogleMLKit/PoseDetection', '3.0.0'
-  pod 'GoogleMLKit/PoseDetectionAccurate', '3.0.0'
-  pod 'GoogleMLKit/SegmentationSelfie', '3.0.0'
-  pod 'GoogleMLKit/TextRecognition', '3.0.0'
-  pod 'GoogleMLKit/TextRecognitionChinese', '3.0.0'
-  pod 'GoogleMLKit/TextRecognitionDevanagari', '3.0.0'
-  pod 'GoogleMLKit/TextRecognitionJapanese', '3.0.0'
-  pod 'GoogleMLKit/TextRecognitionKorean', '3.0.0'
+  pod 'react-native-camera', path: '../node_modules/react-native-camera', subspecs: [
+    'BarcodeDetectorMLKit'
+  ]
+  pod 'QrCode', path: '../node_modules/react-native-qr-decode-image-camera', subspecs: [
+    'BarcodeDetectorMLKit'
+  ]
+  # pod 'GoogleMLKit/BarcodeScanning', '3.0.0'
+  # pod 'GoogleMLKit/FaceDetection', '3.0.0'
+  # pod 'GoogleMLKit/ImageLabeling', '3.0.0'
+  # pod 'GoogleMLKit/ImageLabelingCustom', '3.0.0'
+  # pod 'GoogleMLKit/ObjectDetection', '3.0.0'
+  # pod 'GoogleMLKit/ObjectDetectionCustom', '3.0.0'
+  # pod 'GoogleMLKit/PoseDetection', '3.0.0'
+  # pod 'GoogleMLKit/PoseDetectionAccurate', '3.0.0'
+  # pod 'GoogleMLKit/SegmentationSelfie', '3.0.0'
+  # pod 'GoogleMLKit/TextRecognition', '3.0.0'
+  # pod 'GoogleMLKit/TextRecognitionChinese', '3.0.0'
+  # pod 'GoogleMLKit/TextRecognitionDevanagari', '3.0.0'
+  # pod 'GoogleMLKit/TextRecognitionJapanese', '3.0.0'
+  # pod 'GoogleMLKit/TextRecognitionKorean', '3.0.0'
 
   target 'RnCameraQrTests' do
     inherit! :search_paths
